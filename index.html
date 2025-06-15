@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <title>Kaime Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img src="images/logo.png" alt="logo" class="logo">
+                <ul>
+                    <li><a href="index.html"> Accueil</a></li>
+                    <li><a href="#apropos">ÀPropos</a></li>
+                    <li><a href="projets.html"> Projets</a></li>
+                    <li><a href="#competences"> Compétences</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+                <section id="accueil">
+                    <h1>Bienvenue sur mon Portfolio!</h1>
+                    <img src="images/wk.jpg" alt="work" class="work">
+                    <p>Je debute en développement Web, un domaine qui me passionne.À travers ce portfolio, 
+                        je vous présente mes premiers projets, mes compétences en évolution et ma démarche d'apprentissage.
+                         Chaque ligne de code est pour moi une opportunité d'apprendre, d'expérimenter et de progresser.
+                    </p>
+                </section>
+                <section id="apropos">
+                    <h2> À Propos</h2>
+                    <img src="images/profil_tof.jpg" alt="photo de profil" class="photo-profil">
+                    <div id="text_apropos"> Je m'appelle <strong>KOUASSI Kouadio Aimé</strong> passionné par la 
+                            création de sites web modernes et interactifs Je suis actuellement étudiant en <strong>Développement Web</strong>, 
+                            et je cherche à améliorer mes compétences en Java Script, HTML et CSS. J'adore transformer mes idées en projets concrets 
+                            et expérimenter avec les nouvelles technologies. 
+                    <div><a href="cv.pdf" download= "mon-cv.pdf" class="bouton-cv"> Télécharger Mon CV </a></div>
+                    
+                    </div>
+                    
+                </section>
+                <section id="Projets">
+                    <h2>Mes projets</h2>
+                    <div class="projet-container"></div>
+                </section>
+                <section id="competences">
+                    <h2>Mes Compétences</h2>
+                    <div class="competences-container"></div>
+                </section>
+                <section id="contact">
+                <h2>Contactez-moi ici</h2>
+                <form>
+                    <input type="text" placeholder="votre nom" required>
+                    <input type="email" placeholder="Votre mail" required>
+                    <textarea placeholder="Votre message" required></textarea>
+                    <button type="submit">Envoyer</button>
+                </form>
+                </section>
+        </main>
+        <footer>
+            <p>&copy;2025 Kaime Portfolio. Tous droits réservés. </p>
+        </footer>
+        <script src="script.js" ></script>
+    </body>
+</html>

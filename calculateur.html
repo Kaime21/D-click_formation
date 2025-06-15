@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+
+        <title>Calculateur</title>
+    </head>
+    <body>
+        
+        <h1>Calculateur de Prêt Hypothécaire</h1>
+
+        <div>
+            <p>
+                <label for="montant">Montant du prêt (Fcfa) :</label>
+                <input type="number" id="montant" placeholder="Exemple : 200000">
+            </p>
+            <p>
+                <label for="taux">Taux annuel (%) :</label>
+                <input type="number" id="taux" placeholder="Exemple : 1.5">
+            </p>
+            <p>
+                <label for="duree">Durée du prêt (années) :</label>
+                <input type="number" id="duree" placeholder="Exemple : 5">
+            </p>
+            <button onclick="calculerPaiement()">Calculer le paiement mensuel</button>
+        </div>
+
+    
+        <div class="result" id="resultat"></div>
+
+    
+        <script>
+            function calculerPaiement() {
+                const montant = parseFloat(document.getElementById('montant').value);
+                const tauxAnnuel = parseFloat(document.getElementById('taux').value);
+                const dureeAnnees = parseFloat(document.getElementById('duree').value);
+
+                const r = tauxAnnuel / 100 / 12;
+                const n = dureeAnnees * 12;
+
+                const puissance = Math.pow(1 + r, n);
+                const paiementMensuel = montant * (r * puissance) / (puissance - 1);
+
+                document.getElementById('resultat').textContent =
+                    "Paiement mensuel estimé : " + paiementMensuel.toFixed(2) + " Fcfa";
+            }
+        </script>
+    </body>
+</html>
+
+<body>
